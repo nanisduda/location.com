@@ -17,7 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', '/welcome', ['action' => 'welcome']);
 Route::view('/about', '/about', ['action' => 'about']);
 Route::view('/contact', '/contact', ['action' => 'contact']);
+Route::view('/dw', '/dw');
+Route::view('/loading', '/loading');
+Route::view('/jump', '/jump');
+Route::view('/center', '/center');
+Route::view('/query', '/query');
+Route::view('/chat', '/chat', ['action' => 'chat']);
+Route::view('/faq', '/faq', ['action' => 'faq']);
 
 Route::get('/new', [Controller::class, 'new']);
 Route::get('/help', [Controller::class, 'help']);
 Route::get('/service', [Controller::class, 'service']);
+Route::post('/scanner', [Controller::class, 'scanner']);
+Route::post('/do_query', [Controller::class, 'do_query']);

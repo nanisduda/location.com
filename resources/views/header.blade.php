@@ -118,7 +118,7 @@
 
                             <div class="others-option">
                                 <div class="get-quote">
-                                    <a href="dw.html" class="default-btn">
+                                    <a href="dw" class="default-btn">
                                         <span>开始定位体验</span>
                                     </a>
                                 </div>

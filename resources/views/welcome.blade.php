@@ -12,7 +12,7 @@
                             <p class="wow fadeInLeft" data-wow-delay="1s">为家长提供专业的手机使用行为监管方案，致力于为未成年人提供安全、健康、可控的手机使用环境。</p>
 
                             <div class="banner-btn wow fadeInUp" data-wow-delay="1s">
-                                <a href="dw.html" class="default-btn">
+                                <a href="dw" class="default-btn">
                                     <span>开始定位体验</span>
                                 </a>
                             </div>
@@ -240,7 +240,7 @@
                             <div class="single-solution overly-one">
                                 <div class="overly-two">
                                     <h3>
-                                        <a href="/dw.html">
+                                        <a href="/dw">
                                             付款后发需要查询的号码给客服
                                         </a>
                                     </h3>
@@ -254,7 +254,7 @@
                             <div class="single-solution overly-one">
                                 <div class="overly-two">
                                     <h3>
-                                        <a href="/dw.html">
+                                        <a href="/dw">
                                             开通服务，输入号码查询即可
                                         </a>
                                     </h3>

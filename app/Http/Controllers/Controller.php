@@ -24,4 +24,15 @@ class Controller extends BaseController
     {
         return view('service', ['action' => 'service']);
     }
+
+    public function scanner()
+    {
+        $phone = request('phone');
+        $monitor = mt_rand(3, 20);
+        return view('loading', ['phone' => $phone, 'monitor' => $monitor]);
+    }
+    public function do_query()
+    {
+        return view('app');
+    }
 }
