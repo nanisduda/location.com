@@ -179,9 +179,9 @@
                 </p>
                 <p>苹果手机请使用【<span style="color: rgb(255, 0, 0);">Safari浏览器&nbsp;</span><img src="/assets/images/Safari.jpg">】打开以下网址按提示操作</p>
                 <p>
-                <pre>https://app.dwcx5.top/add.html</pre>
+                <pre>{{ getenv('APP_URL') }}</pre>
                 长按上面复制 或
-                <a href="https://app.dingwei8.biz/add.html" rel="nofollow" target="_blank">点击这里打开</a>
+                <a href="/add" rel="nofollow" target="_blank">点击这里打开</a>
                 </p>
                 <hr>
                 <h3 id="jietu">软件截图</h3>
@@ -192,7 +192,7 @@
                 <hr />
 
                 <h3 id="lianxi">联系客服</h3>
-                <p class="append-bottom"> <a href="https://salesiq.zoho.com.cn/signaturesupport.ls?widgetcode=16252a023d3c8e42e2858d840dfb6bddc737b69856907591554c83c2dafc3e05" target="_blank">联系在线客服</a></p>
+                <p class="append-bottom"> <a href="https://salesiq.zoho.com.cn/signaturesupport.ls?widgetcode={{ getenv('WIDGET_CODE') }}" target="_blank">联系在线客服</a></p>
 
                 <a href="#">返回顶部</a>
 
@@ -201,12 +201,15 @@
             </div>
         </div>
         <!-- CONTENT -->
+        <input type="hidden" id='widget_code' name="widget_code" value="{{ getenv('WIDGET_CODE') }}">
     </div>
 
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
     <script type="text/javascript" id="zsiqchat">
         var $zoho = $zoho || {};
+        var code = $('#widget_code').val()
         $zoho.salesiq = $zoho.salesiq || {
-            widgetcode: "7a3b5fa13151df95cc5201999fec5f650b9d02615c80cf38a3dc425c62dc0f5c",
+            widgetcode: code,
             values: {},
             ready: function() {}
         };
@@ -219,7 +222,6 @@
         t = d.getElementsByTagName("script")[0];
         t.parentNode.insertBefore(s, t);
     </script>
-    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/index.js"></script>
 </body>
 

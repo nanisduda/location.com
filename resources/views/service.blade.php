@@ -254,12 +254,7 @@
             <div class="col-lg-4">
                 <div class="widget-sidebar">
                     <div class="sidebar-widget search">
-                        <form class="search-form" action="/scanner.php" method="POST">
-                            <input class="form-control" name="phone" id="phone" placeholder="输入手机号码开始定位" type="tel" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength="11" required>
-                            <button class="search-button" type="submit">
-                                <i class="bx bx-search"></i>
-                            </button>
-                        </form>
+                        @include('phone_form')
                     </div>
                     <div class="sidebar-widget categories">
                         <h3 class="widget-title">热点推荐</h3>

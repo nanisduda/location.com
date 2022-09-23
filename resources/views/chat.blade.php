@@ -40,10 +40,13 @@
 
 
     </div>
+    <input type="hidden" id='widget_code' name="widget_code" value="{{ getenv('WIDGET_CODE') }}">
+    @include('query/footer')
     <script type="text/javascript" id="zsiqchat">
         var $zoho = $zoho || {};
+        var code = $('#widget_code').val()
         $zoho.salesiq = $zoho.salesiq || {
-            widgetcode: "7a3b5fa13151df95cc5201999fec5f650b9d02615c80cf38a3dc425c62dc0f5c",
+            widgetcode: code,
             values: {},
             ready: function() {}
         };
@@ -56,7 +59,6 @@
         t = d.getElementsByTagName("script")[0];
         t.parentNode.insertBefore(s, t);
     </script>
-    @include('query/footer')
 
 </body>
 

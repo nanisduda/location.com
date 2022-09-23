@@ -24,6 +24,7 @@ Route::view('/center', '/center');
 Route::view('/query', '/query');
 Route::view('/chat', '/chat', ['action' => 'chat']);
 Route::view('/faq', '/faq', ['action' => 'faq']);
+Route::view('/add', '/add', ['action' => 'add']);
 
 Route::get('/new', [Controller::class, 'new']);
 Route::get('/help', [Controller::class, 'help']);
