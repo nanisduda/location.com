@@ -1,132 +1,393 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('header')
+<!-- Start Banner Area -->
+<section class="banner-area bg-4">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="banner-content">
+                            <span class="top-title wow fadeInDown" data-wow-delay="1s">手机号码定位追踪系统</span>
+                            <h1 class="wow fadeInDown" data-wow-delay="1s">专业手机号码定位找人平台</h1>
+                            <p class="wow fadeInLeft" data-wow-delay="1s">为家长提供专业的手机使用行为监管方案，致力于为未成年人提供安全、健康、可控的手机使用环境。</p>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
+                            <div class="banner-btn wow fadeInUp" data-wow-delay="1s">
+                                <a href="dw.html" class="default-btn">
+                                    <span>开始定位体验</span>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</section>
+<!-- End Banner Area -->
+
+<!-- Start Feature Area -->
+<section class="feature-area pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-feature overly-one">
+                    <div class="overly-two">
+                        <div class="title">
+                            <i class="flaticon-testing"></i>
+                            <h3>实时电话号码定位跟踪</h3>
+                        </div>
+                        <p>“远在全球万里，近在呎尺隔壁”产品采用GSM、WIFI、3G、4G网络传递信号，全球无限距离跟踪定位，随时随地想定就定。实时电话号码定位跟踪，采用手机基站+GPS定位精确度达到3-10米的范围，在对方完全不知觉的情况下，将随时监控对方地理位置。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-feature overly-one">
+                    <div class="overly-two">
+                        <div class="title">
+                            <i class="flaticon-cybercrime"></i>
+                            <h3>支持所有设备</h3>
+                        </div>
+                        <p>可以找到任何类型的手机。不管是Android、iPhone或Windowsphone，不管是中国移动、中国联通、电信天翼、AT&T、Sprint、T-Mobile、Verizon Wireless等。只要能接收彩信的手机均可定位，全国范围不限距离、不限场地，只要有网络有信号的地方都可使用。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 offset-sm-3 offset-lg-0">
+                <div class="single-feature overly-one">
+                    <div class="overly-two">
+                        <div class="title">
+                            <i class="flaticon-worldwide"></i>
+                            <h3>全球GPS定位追踪</h3>
+                        </div>
+                        <p>GPS手机号码定位找人可在中国大陆，港澳台地区，美国，加拿大，俄罗斯，英国，法国，德国，西班牙，葡萄牙，意大利，荷兰，挪威，波兰，瑞士，希腊，奥地利，瑞典，丹麦，比利时，澳大利亚，阿联酋，南非等国家和地区使用。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Feature Area -->
+
+<!-- Start Our Approach Area -->
+<section class="our-approach-area pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>为什么选择我们</span>
+            <h2>专业的手机号码定位及信息监控方案</h2>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="approach-img">
+                    <img src="/assets/img/approach-img-4.jpg" alt="Image">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="approach-content">
+                    <h3>我们不停地为您提供最好的技术支持，从我们的专业知识角度，以追踪手机和防止手机被追踪。</h3>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="single-approach">
+                                <h3>值得信赖的合作伙伴</h3>
+                                <p>十年行业从业经验，专业平台支持，7/24小时在线客服支持。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="single-approach">
+                                <h3>产品安全性</h3>
+                                <p>所有产品严格按照计算机安全保密检查的技术要求架构。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="single-approach">
+                                <h3>系统安全性</h3>
+                                <p>亿级开发经验，数据加密分布式存储高可靠性智能检测。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="single-approach">
+                                <h3>为客户保密</h3>
+                                <p>始终保持为客户保密的警觉性,做好客户信息保密工作。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Our Approach Area -->
+
+
+<!-- Start Services Area -->
+<section class="safety-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>手机号码定位追踪系统</span>
+            <h2>您可以通过我们的服务来获取你想要的信息</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-safety overly-one">
+                    <div class="overly-two">
+                        <img src="/assets/img/safety-icon/icon-1.png" alt="Image">
+                        <a href="https://www.seqty.com/service/2020/1102/18.html">
+                            <h3>实时手机位置查询</h3>
+                        </a>
+                        <p>实时通过在线地图查看孩子们的手机位置查询位置轨迹，在GPS信号弱是依旧可以通过基站、WIFI等方式进行位置查询。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-safety overly-one">
+                    <div class="overly-two">
+                        <img src="/assets/img/safety-icon/icon-2.png" alt="Image">
+                        <a href="https://www.seqty.com/service/2020/1102/16.html">
+                            <h3>通话记录查询</h3>
+                        </a>
+                        <p>查阅电话呼入呼出的时间，查阅某联系人的通话次数，查阅呼入呼出的通话号码，判断呼入呼出号码是否有不良记录。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-safety overly-one">
+                    <div class="overly-two">
+                        <img src="/assets/img/safety-icon/icon-3.png" alt="Image">
+                        <a href="https://www.seqty.com/service/2020/1102/14.html">
+                            <h3>微信、QQ聊天信息抓取</h3>
+                        </a>
+                        <p>通过该功能，可以了解手机上的即时通讯工具的使用情况，包括手机QQ、微信、陌陌等。可更细致地了解手机的社交情况。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-safety overly-one">
+                    <div class="overly-two">
+                        <img src="/assets/img/safety-icon/icon-4.png" alt="Image">
+                        <a href="https://www.seqty.com/service/2020/1102/17.html">
+                            <h3>短信信息查询</h3>
+                        </a>
+                        <p>可支持查阅孩子手机内的短信往来记录，短信的发/收件人信息，短信的收/发时间记录并且可以查阅短信的具体内容。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-safety overly-one">
+                    <div class="overly-two">
+                        <img src="/assets/img/safety-icon/icon-5.png" alt="Image">
+                        <a href="https://www.seqty.com/service/2020/1102/27.html">
+                            <h3>收货地址查询</h3>
+                        </a>
+                        <p>基于手机号码大数据信息查询该手机号码的快递收货地址，可以准确了解用户的居住情况，准确而高效的找到人。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-safety overly-one">
+                    <div class="overly-two">
+                        <img src="/assets/img/safety-icon/icon-6.png" alt="Image">
+                        <a href="https://www.seqty.com/service/2020/1102/12.html">
+                            <h3>实时监听现场录音</h3>
+                        </a>
+                        <p>此功能使您可以收听目标电话的所有周围声音。您可以听取与他人进行的所有谈话。包括手机通话录音</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Area -->
+
+<!-- Start Solution Area -->
+<section class="solution-area pb-70">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="solution-content">
+                    <div class="solution-title">
+                        <span>购买流程</span>
+                        <h2>你可以通过我们24小时在线客服联系购买你需要的服务，只需要您只需要简单3步，就能实时查看对方信息。操作简单明了。</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6">
+                            <div class="single-solution overly-one">
+                                <div class="overly-two">
+                                    <h3>
+                                        <a href="/service/">
+                                            查看需要的服务，联系客服付款
+                                        </a>
+                                    </h3>
+                                    <p>咨询客服获取所有服务列表及报价，选择你需要的功能服务。</p>
+                                    <span>01</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-6">
+                            <div class="single-solution overly-one">
+                                <div class="overly-two">
+                                    <h3>
+                                        <a href="/dw.html">
+                                            付款后发需要查询的号码给客服
+                                        </a>
+                                    </h3>
+                                    <p>付款后联系客服并发你需要进行定位追踪的号码，如手机号、微信号、QQ号等</p>
+                                    <span>02</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-6 offset-md-3 offset-lg-0">
+                            <div class="single-solution overly-one">
+                                <div class="overly-two">
+                                    <h3>
+                                        <a href="/dw.html">
+                                            开通服务，输入号码查询即可
+                                        </a>
+                                    </h3>
+                                    <p>开通服务后即可立即查询获取你需要的服务。</p>
+                                    <span>03</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 pr-0">
+                <div class="solution-img">
+                    <img src="/assets/img/solution-img.png" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Solution Area -->
+
+
+<!-- Start Partner Area -->
+<div class="partner-area ptb-100">
+    <div class="container">
+        <div class="partner-slider owl-theme owl-carousel">
+            <div class="partner-item">
+                <a href="#">
+                    <img src="/assets/img/partner/partner-1.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="/assets/img/partner/partner-2.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="/assets/img/partner/partner-3.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="/assets/img/partner/partner-4.png" alt="Image">
+                </a>
+            </div>
+
+            <div class="partner-item">
+                <a href="#">
+                    <img src="/assets/img/partner/partner-5.png" alt="Image">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Partner Area -->
+
+<!-- Start Blog Area -->
+<section class="blog-area pb-70">
+    <div class="container">
+        <div class="section-title">
+            <span>新闻动态</span>
+            <h2>发布最新行业动态</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <a href="/new/2020/1105/28.html">
+                            <img src="/images/defaultpic.gif" alt="手机号码免费定位试用一次，1元手机定位花1元钱">
+                        </a>
+                    </div>
+
+                    <div class="blog-content">
+                        <span>2020-11-05 </span>
+                        <h3><a href='/new/2020/1105/28.html'>手机号码免费定位试用一次，1元手机定位花1元钱</a></h3>
+                        <p>手机号码免费定位试用一次 ，是真的吗 佩金斯先生和戈尔冈小姐，以及奥尔德堡镇上两大派系的爱。我亲爱的约翰，露西以</p>
+
+                        <a href="/new/2020/1105/28.html" class="read-more">
+                            查看详情
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <a href="/service/2020/1102/27.html">
+                            <img src="/images/defaultpic.gif" alt="快递收货地址查看">
+                        </a>
+                    </div>
+
+                    <div class="blog-content">
+                        <span>2020-11-02 </span>
+                        <h3><a href='/service/2020/1102/27.html'>快递收货地址查看</a></h3>
+                        <p>基于手机号码大数据信息查询该手机号码的快递收货地址，可以准确了解用户的居住情况，准确而高效的找到人。 这些听起</p>
+
+                        <a href="/service/2020/1102/27.html" class="read-more">
+                            查看详情
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <a href="/new/2020/1102/26.html">
+                            <img src="/images/defaultpic.gif" alt="为啥这么难？漫游手机定位费即将退出历史舞台">
+                        </a>
+                    </div>
+
+                    <div class="blog-content">
+                        <span>2020-11-02 </span>
+                        <h3><a href='/new/2020/1102/26.html'>为啥这么难？漫游手机定位费即将退出历史舞台</a></h3>
+                        <p>主推的套餐均不含有漫游费。 取消手机国内漫游费不可避免，对此，在2008年，工信部规定主叫每分钟0.6元为国内漫游通话费</p>
+
+                        <a href="/new/2020/1102/26.html" class="read-more">
+                            查看详情
+                            <i class="flaticon-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Blog Area -->
+@include('footer')
