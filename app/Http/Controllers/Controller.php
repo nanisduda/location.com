@@ -12,7 +12,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index($action)
+    public function content($action)
     {
         $actArr = ['new' => Article::CAT_NEWS, 'help' => Article::CAT_HELP, 'service' => Article::CAT_SERVICE];
         $cat = $actArr[$action];
