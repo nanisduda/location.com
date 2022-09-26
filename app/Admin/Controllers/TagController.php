@@ -19,7 +19,7 @@ class TagController extends AdminController
     {
         return Grid::make(new Tag(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('name');
+            $grid->column('name')->label();
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
         

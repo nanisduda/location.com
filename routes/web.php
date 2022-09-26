@@ -26,8 +26,11 @@ Route::view('/chat', '/chat', ['action' => 'chat']);
 Route::view('/faq', '/faq', ['action' => 'faq']);
 Route::view('/add', '/add', ['action' => 'add']);
 
-Route::get('/new', [Controller::class, 'new']);
+Route::get('/{action}', [Controller::class,'index']);
+
+/* Route::get('/new', [Controller::class, 'new']);
 Route::get('/help', [Controller::class, 'help']);
-Route::get('/service', [Controller::class, 'service']);
+Route::get('/service', [Controller::class, 'service']); */
+Route::get('/detail/{id}', [Controller::class, 'detail']);
 Route::post('/scanner', [Controller::class, 'scanner']);
 Route::post('/do_query', [Controller::class, 'do_query']);

@@ -24,7 +24,7 @@ class ArticleController extends AdminController
             $grid->column('title');
             $grid->column('category');
             $grid->column('author');
-            $grid->column('cover')->image('/storage/',60);
+            $grid->column('cover')->image('/storage/',80);
             $grid->column('tags');
             $grid->column('hot_desc');
             $grid->column('comment_cnt');
@@ -71,10 +71,10 @@ class ArticleController extends AdminController
         return Form::make(new Article(), function (Form $form) {
             $form->display('id');
             $form->text('title');
-            $form->select('category')->options(AppArticle::MAPPING_CAT);
-            $form->text('author');
+            $form->select('category')->options(AppArticle::MAPPING_CAT)->default(AppArticle::CAT_NEWS);
+            $form->text('author')->default('admin');
             $form->image('cover');
-            $form->textarea('content');
+            $form->editor('content');
             $form->multipleSelect('tags')->options(Tag::query()->pluck('name', 'id'))->saving(function ($value) {
                 return join(',', $value);
             });

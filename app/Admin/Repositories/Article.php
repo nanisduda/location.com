@@ -13,4 +13,9 @@ class Article extends EloquentRepository
      * @var string
      */
     protected $eloquentClass = Model::class;
+
+    public function getCoverAttribute($value)
+    {
+        // return '/storage/' . $value;
+    }
 }

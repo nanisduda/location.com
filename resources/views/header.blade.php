@@ -31,15 +31,6 @@
     <title>免费手机号码定位找人(寻人)系统-微信聊天记录获取-手机短信通话记录查看-开房记录查看</title>
     <meta name="keywords" content="免费手机号码定位,手机定位找人系统,通过GPS手机号码定位找人,微信聊天记录获取,手机短信通话记录查看,开房记录查看" />
     <meta name="description" content="只需要手机号码就能准确定位找人,帮助您找到丢失的移动设备,失联朋友或家庭成员的最终解决方案。窥探任何电话号码的GPS位置、通话记录、短信、微信QQ聊天记录、查看开房记录等。" />
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?1241c91d660923eb2e00a04e99fb838f";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 
 </head>
 
@@ -118,7 +109,7 @@
 
                             <div class="others-option">
                                 <div class="get-quote">
-                                    <a href="dw" class="default-btn">
+                                    <a href="/dw" class="default-btn">
                                         <span>开始定位体验</span>
                                     </a>
                                 </div>
