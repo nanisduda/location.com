@@ -1,5 +1,7 @@
 <?php
 
+use App\Admin\Controllers\ArticleController;
+use App\Admin\Controllers\TagController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Dcat\Admin\Admin;
@@ -14,4 +16,6 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    $router->resource('/article', ArticleController::class);
+    $router->resource('/tags', TagController::class);
 });
