@@ -35,7 +35,7 @@
                                 </h3>
                                 <a href='/detail/{{ $article->id }}'>
                                     @if($article->cover)
-                                    <img src="/storage/{{$article->cover}}" alt="{{$article->title}}" />
+                                    <img src="{{$article->cover}}" alt="{{$article->title}}" />
                                     @endif
                                 </a>
                                 <p> {{strip_tags($article->abbr)}} </p>

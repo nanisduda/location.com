@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tag', function (Blueprint $table) {
+        Schema::create('db_config', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->comment('名称');
-            $table->string('articles')->comment('文章（ID）')->nullable();
+            $table->string('name');
+            $table->string('group');
+            $table->string('title');
+            $table->string('tip');
+            $table->string('type');
+            $table->string('value');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tag');
+        Schema::dropIfExists('db_config');
     }
 };

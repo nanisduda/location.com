@@ -192,7 +192,7 @@
                 <hr />
 
                 <h3 id="lianxi">联系客服</h3>
-                <p class="append-bottom"> <a href="https://salesiq.zoho.com.cn/signaturesupport.ls?widgetcode={{ getenv('WIDGET_CODE') }}" target="_blank">联系在线客服</a></p>
+                <p class="append-bottom"> <a href="https://salesiq.zoho.com.cn/signaturesupport.ls?widgetcode={{ $widget_code }}" target="_blank">联系在线客服</a></p>
 
                 <a href="#">返回顶部</a>
 
@@ -201,7 +201,7 @@
             </div>
         </div>
         <!-- CONTENT -->
-        <input type="hidden" id='widget_code' name="widget_code" value="{{ getenv('WIDGET_CODE') }}">
+        <input type="hidden" id='widget_code' name="widget_code" value="{{ $widget_code }}">
     </div>
 
     <script type="text/javascript" src="/assets/js/jquery.min.js"></script>

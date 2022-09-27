@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('title')->comment('标题');
             $table->string('category')->comment('分类');
             $table->string('author')->comment('作者');
-            $table->text('cover')->comment('封面');
+            $table->text('cover')->comment('封面')->nullable();
             $table->text('content')->comment('内容');
-            $table->string('tags')->comment('标签（ID）');
+            $table->string('tags')->comment('标签（ID）')->nullable();
             $table->unsignedInteger('hot_desc')->default(0)->comment('热度排序（降序）');
             $table->unsignedInteger('comment_cnt')->default(0)->comment('评论数');
             $table->timestamps();

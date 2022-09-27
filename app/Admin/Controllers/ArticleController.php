@@ -5,6 +5,7 @@ namespace App\Admin\Controllers;
 use App\Admin\Repositories\Article;
 use App\Models\Article as AppArticle;
 use App\Models\Tag;
+use Dcat\Admin\Admin;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
@@ -21,10 +22,14 @@ class ArticleController extends AdminController
     {
         return Grid::make(new Article(), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('title');
-            $grid->column('category');
+            $grid->column('title')->limit(40);
+            $grid->column('category')->using(AppArticle::MAPPING_CAT)->label([
+                AppArticle::CAT_HELP => Admin::color()->orange(),
+                AppArticle::CAT_NEWS => Admin::color()->green(),
+                AppArticle::CAT_SERVICE => Admin::color()->primary(),
+            ]);
             $grid->column('author');
-            $grid->column('cover')->image('/storage/',80);
+            $grid->column('cover')->image('/', 80);
             $grid->column('tags');
             $grid->column('hot_desc');
             $grid->column('comment_cnt');
@@ -73,7 +78,9 @@ class ArticleController extends AdminController
             $form->text('title');
             $form->select('category')->options(AppArticle::MAPPING_CAT)->default(AppArticle::CAT_NEWS);
             $form->text('author')->default('admin');
-            $form->image('cover');
+            $form->image('cover')->saveAsString()->saving(function ($value) {
+                return '/storage/' . $value;
+            });
             $form->editor('content');
             $form->multipleSelect('tags')->options(Tag::query()->pluck('name', 'id'))->saving(function ($value) {
                 return join(',', $value);

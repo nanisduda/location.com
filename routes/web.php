@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,23 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', '/welcome', ['action' => 'welcome']);
+Route::get('/', [HomeController::class, 'welcome']);
 Route::view('/about', '/about', ['action' => 'about']);
 Route::view('/contact', '/contact', ['action' => 'contact']);
 Route::view('/dw', '/dw');
 Route::view('/loading', '/loading');
 Route::view('/jump', '/jump');
-Route::view('/center', '/center');
 Route::view('/query', '/query');
-Route::view('/chat', '/chat', ['action' => 'chat']);
 Route::view('/faq', '/faq', ['action' => 'faq']);
 Route::view('/add', '/add', ['action' => 'add']);
 
-Route::get('/{action}', [Controller::class,'content']);
+Route::get('/detail/{id}', [HomeController::class, 'detail']);
+Route::get('/center', [HomeController::class, 'center']);
+Route::get('/chat', [HomeController::class, 'chat']);
+Route::post('/scanner', [HomeController::class, 'scanner']);
+Route::post('/do_query', [HomeController::class, 'do_query']);
 
-/* Route::get('/new', [Controller::class, 'new']);
-Route::get('/help', [Controller::class, 'help']);
-Route::get('/service', [Controller::class, 'service']); */
-Route::get('/detail/{id}', [Controller::class, 'detail']);
-Route::post('/scanner', [Controller::class, 'scanner']);
-Route::post('/do_query', [Controller::class, 'do_query']);
+
+Route::get('/{action}', [HomeController::class, 'content']);

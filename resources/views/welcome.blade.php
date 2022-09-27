@@ -9,7 +9,8 @@
                         <div class="banner-content">
                             <span class="top-title wow fadeInDown" data-wow-delay="1s">手机号码定位追踪系统</span>
                             <h1 class="wow fadeInDown" data-wow-delay="1s">专业手机号码定位找人平台</h1>
-                            <p class="wow fadeInLeft" data-wow-delay="1s">为家长提供专业的手机使用行为监管方案，致力于为未成年人提供安全、健康、可控的手机使用环境。</p>
+                            <p class="wow fadeInLeft" data-wow-delay="1s">为家长提供专业的手机使用行为监管方案，致力于为未成年人提供安全、健康、可控的手机使用环境。
+                            </p>
 
                             <div class="banner-btn wow fadeInUp" data-wow-delay="1s">
                                 <a href="dw" class="default-btn">
@@ -36,7 +37,8 @@
                             <i class="flaticon-testing"></i>
                             <h3>实时电话号码定位跟踪</h3>
                         </div>
-                        <p>“远在全球万里，近在呎尺隔壁”产品采用GSM、WIFI、3G、4G网络传递信号，全球无限距离跟踪定位，随时随地想定就定。实时电话号码定位跟踪，采用手机基站+GPS定位精确度达到3-10米的范围，在对方完全不知觉的情况下，将随时监控对方地理位置。</p>
+                        <p>“远在全球万里，近在呎尺隔壁”产品采用GSM、WIFI、3G、4G网络传递信号，全球无限距离跟踪定位，随时随地想定就定。实时电话号码定位跟踪，采用手机基站+GPS定位精确度达到3-10米的范围，在对方完全不知觉的情况下，将随时监控对方地理位置。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -48,7 +50,8 @@
                             <i class="flaticon-cybercrime"></i>
                             <h3>支持所有设备</h3>
                         </div>
-                        <p>可以找到任何类型的手机。不管是Android、iPhone或Windowsphone，不管是中国移动、中国联通、电信天翼、AT&T、Sprint、T-Mobile、Verizon Wireless等。只要能接收彩信的手机均可定位，全国范围不限距离、不限场地，只要有网络有信号的地方都可使用。</p>
+                        <p>可以找到任何类型的手机。不管是Android、iPhone或Windowsphone，不管是中国移动、中国联通、电信天翼、AT&T、Sprint、T-Mobile、Verizon
+                            Wireless等。只要能接收彩信的手机均可定位，全国范围不限距离、不限场地，只要有网络有信号的地方都可使用。</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +63,8 @@
                             <i class="flaticon-worldwide"></i>
                             <h3>全球GPS定位追踪</h3>
                         </div>
-                        <p>GPS手机号码定位找人可在中国大陆，港澳台地区，美国，加拿大，俄罗斯，英国，法国，德国，西班牙，葡萄牙，意大利，荷兰，挪威，波兰，瑞士，希腊，奥地利，瑞典，丹麦，比利时，澳大利亚，阿联酋，南非等国家和地区使用。</p>
+                        <p>GPS手机号码定位找人可在中国大陆，港澳台地区，美国，加拿大，俄罗斯，英国，法国，德国，西班牙，葡萄牙，意大利，荷兰，挪威，波兰，瑞士，希腊，奥地利，瑞典，丹麦，比利时，澳大利亚，阿联酋，南非等国家和地区使用。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -325,67 +329,28 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a href="/new/2020/1105/28.html">
-                            <img src="/images/defaultpic.gif" alt="手机号码免费定位试用一次，1元手机定位花1元钱">
-                        </a>
-                    </div>
+            @foreach ($content as $item)
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-img">
+                            <a href="/detail/{{$item->id}}">
+                                <img src="{{$item->cover}}" alt="{{$item->title}}">
+                            </a>
+                        </div>
 
-                    <div class="blog-content">
-                        <span>2020-11-05 </span>
-                        <h3><a href='/new/2020/1105/28.html'>手机号码免费定位试用一次，1元手机定位花1元钱</a></h3>
-                        <p>手机号码免费定位试用一次 ，是真的吗 佩金斯先生和戈尔冈小姐，以及奥尔德堡镇上两大派系的爱。我亲爱的约翰，露西以</p>
+                        <div class="blog-content">
+                            <span>{{$item->date}} </span>
+                            <h3><a href='/detail/{{$item->id}}'>{{$item->title}}</a></h3>
+                            <p>{{$item->abbr}}</p>
 
-                        <a href="/new/2020/1105/28.html" class="read-more">
-                            查看详情
-                            <i class="flaticon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a href="/service/2020/1102/27.html">
-                            <img src="/images/defaultpic.gif" alt="快递收货地址查看">
-                        </a>
-                    </div>
-
-                    <div class="blog-content">
-                        <span>2020-11-02 </span>
-                        <h3><a href='/service/2020/1102/27.html'>快递收货地址查看</a></h3>
-                        <p>基于手机号码大数据信息查询该手机号码的快递收货地址，可以准确了解用户的居住情况，准确而高效的找到人。 这些听起</p>
-
-                        <a href="/service/2020/1102/27.html" class="read-more">
-                            查看详情
-                            <i class="flaticon-right-arrow"></i>
-                        </a>
+                            <a href="/detail/{{$item->id}}" class="read-more">
+                                查看详情
+                                <i class="flaticon-right-arrow"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-blog">
-                    <div class="blog-img">
-                        <a href="/new/2020/1102/26.html">
-                            <img src="/images/defaultpic.gif" alt="为啥这么难？漫游手机定位费即将退出历史舞台">
-                        </a>
-                    </div>
-
-                    <div class="blog-content">
-                        <span>2020-11-02 </span>
-                        <h3><a href='/new/2020/1102/26.html'>为啥这么难？漫游手机定位费即将退出历史舞台</a></h3>
-                        <p>主推的套餐均不含有漫游费。 取消手机国内漫游费不可避免，对此，在2008年，工信部规定主叫每分钟0.6元为国内漫游通话费</p>
-
-                        <a href="/new/2020/1102/26.html" class="read-more">
-                            查看详情
-                            <i class="flaticon-right-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </section>

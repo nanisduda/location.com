@@ -40,7 +40,7 @@
 
 
     </div>
-    <input type="hidden" id='widget_code' name="widget_code" value="{{ getenv('WIDGET_CODE') }}">
+    <input type="hidden" id='widget_code' name="widget_code" value="{{ $widget_code }}">
     @include('query/footer')
     <script type="text/javascript" id="zsiqchat">
         var $zoho = $zoho || {};

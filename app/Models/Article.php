@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 class Article extends Model
 {
-    use HasDateTimeFormatter;
+    use HasDateTimeFormatter, HasFactory;
     protected $table = 'article';
     protected $fillable = ['date_time', 'abbr'];
     protected $allowField = ['id', 'author', 'cover', 'created_at', 'title', 'content'];

@@ -1,6 +1,7 @@
 <?php
 
 use App\Admin\Controllers\ArticleController;
+use App\Admin\Controllers\SystemConfigController;
 use App\Admin\Controllers\TagController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
@@ -18,4 +19,6 @@ Route::group([
 
     $router->resource('/article', ArticleController::class);
     $router->resource('/tags', TagController::class);
+
+    $router->resource('/system_config', SystemConfigController::class);
 });
