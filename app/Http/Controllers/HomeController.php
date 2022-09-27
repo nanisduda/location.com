@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\MobileLog;
+use Dcat\Admin\Form\Field\Mobile;
 
 class HomeController extends Controller
 {
@@ -34,6 +36,10 @@ class HomeController extends Controller
     public function scanner()
     {
         $phone = request('phone');
+        MobileLog::create([
+            'mobile' => $phone,
+            'ip' => request()->ip(),
+        ]);
         $monitor = mt_rand(3, 20);
         return view('loading', ['phone' => $phone, 'monitor' => $monitor]);
     }
